@@ -1,0 +1,23 @@
+<div>
+	<p>Add New Customer</p>
+	<form ng-submit="create()">
+		customer Name: <input type="text" name="customerName" ng-model='customer.customerName'>
+		<input type="submit" name="submit" value="Add">
+	</form>
+	<table>
+		<thead>
+			<tr>
+				<th>Customer Name</th>
+				<th>Created Date</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat='customer in customers'>
+				<td ng-bind="customer.customerName"></td>
+				<td ng-bind="customer.createdAt | date: MM/dd/yyyy"></td>
+				<td><button ng-click="delete(customer._id)">Remove</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

@@ -1,0 +1,15 @@
+<div id="form">
+	<p>Add New Product</p>
+	<form ng-submit='create()'>
+		name: <input type="text" name="name" ng-model="product.name">
+		Image URL: <input type="text" name="imageUrl" ng-model="product.imageUrl">
+		Description: <textarea ng-model="product.description"></textarea>
+		Quantity: <input type="text" name="quantity" ng-model="product.quantity">
+		<input type="submit" name="submit" value="create">
+	</form>
+</div>
+<div ng-repeat="product in products">
+	<img src="{{ product.imageUrl }}">
+	<p ng-bind="product.name"></p>
+	<p ng-bind="product.quantity"></p>
+</div>

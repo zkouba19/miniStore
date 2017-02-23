@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>Index Page</title>
+	<script src="angular/angular.js"></script>
+	<script src="angular-route/angular-route.js"></script>
+	<script src="assets/app.js"></script>
+	<script src="assets/factories/customersFactory.js"></script>
+	<script src="assets/factories/ordersFactory.js"></script>
+	<script src="assets/factories/productsFactory.js"></script>
+	<script src="assets/controllers/orderController.js"></script>
+	<script src="assets/controllers/productController.js"></script>
+	<script src="assets/controllers/customerController.js"></script>
+	<script src="assets/controllers/dashboardController.js"></script>
+</head>
+<body>
+<div>
+	<h1>Welcome to My Store</h1>
+	<a href="/">Dashboard</a>
+	<a href="#!/products">Products</a>
+	<a href="#!/orders">Orders</a>
+	<a href="#!/customers">Customers</a>
+	<a href="#!/settings">Settings</a>
+</div>
+<div ng-view></div>
+</body>
+</html>

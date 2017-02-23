@@ -1,0 +1,13 @@
+<div class="products" ng-repeat="product in products">
+	<img src="{{ product.imageUrl }}">
+	<p ng-bind="product.name"></p>
+	<p ng-bind="product.quantity"></p>
+</div>
+<h3>Recent Orders</h3>
+<div class="orders" ng-repeat="order in orders">
+	<p><span ng-bind="order.customer.customerName"></span> purchased <span ng-bind="order.quantity"></span> <span ng-bind="order.product.name"></span></p>
+</div>
+<h3>New Customers</h3>
+<div class="customers" ng-repeat="customer in customers">
+	<p><span ng-bind="customer.customerName"></span> joined the store.</p>
+</div>
